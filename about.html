@@ -12,7 +12,29 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom styles for this template -->
-    <link href="css/jumbotron.css" rel="stylesheet">  </head>
+    <link href="css/jumbotron.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+     <script src="js/ion.sound.js"></script>
+<script>   
+$(document).ready(function(){  
+	
+ 	$.ionSound({
+            sounds: [
+                "breaking_glass"
+            ],
+            path: "sounds/",
+            multiPlay: true,
+            volume: "1.0"
+        });
+
+		$("#breakGlassButton").on("click", function(){
+    		$.ionSound.play("breaking_glass");
+		});
+
+});
+</script>   
+    
+ </head>
 
   <body>
   	
@@ -44,20 +66,25 @@
       <!-- Example row of columns -->
       <br>
    <div class="well">
-   	<img src="./images/small/head_shots1.jpg"><img src="./images/small/head_shots2.jpg">
-        <p>Punk Rock born out of sweat, blood and tears in West Chester, PA...  <br><b>Members:</b> John, Scott1, Scott2, Bradford, and occasional others.</p>      </div>
-      <hr>
+   	<p>Punk Rock born out of sweat, blood and tears in West Chester, PA...</p>  
+   	<img src="./images/small/hunter.jpg"><img src="./images/small/head_shots1.jpg"><img src="./images/small/head_shots2.jpg">
+        <p><B>Members:</b> John, Scott1, Scott2, Bradford, and occasional others.</p>      </div>
+      
+      <br>
+      <button id="breakGlassButton" >BREAK SOME GLASS<BR>PRESS THIS BUTTON<BR>NOW!</button>
+      <br><br>
+      
  <img src="./images/small/band-12.jpg">
       <footer>
       	<hr>
-        <p>&copy; eWeaverSolutions 2014</p>
+        <p>&copy; eWeaverSolutions 2014  </p>
       </footer>
     </div> <!-- /container -->
   	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+     
     <script src="js/bootstrap.min.js"></script>
   </body>
 </html>
